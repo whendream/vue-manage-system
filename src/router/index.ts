@@ -13,6 +13,15 @@ const routes: RouteRecordRaw[] = [
         component: Home,
         children: [
             {
+                path: '/device',
+                name: 'device',
+                meta: {
+                    title: '设备管理',
+                    permiss: '1',
+                },
+                component: () => import(/* webpackChunkName: "dashboard" */ '../views/device.vue'),
+            },
+            {
                 path: '/dashboard',
                 name: 'dashboard',
                 meta: {
